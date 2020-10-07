@@ -4,15 +4,22 @@ import java.util.Scanner;
 
 public class Add {
   public static void main(String[] args) {
+    String s1String;
     int s1;
     int s2;
     
     Scanner sc = new Scanner(System.in);
     
+    System.out.print("S1   : ");
+    s1String = sc.next();
     try {
-      System.out.print("S1   : ");
-      s1 = sc.nextInt();
-      
+      s1 = Integer.parseInt(s1String);
+    } catch (NumberFormatException e) {
+      s1 = 0;
+    }
+    
+    
+    try {
       System.out.print("S2   : ");
       s2 = sc.nextInt();
       
